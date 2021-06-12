@@ -11,26 +11,26 @@
         
     <table border="1">
     <tr>
-    <td>ID</td>
+    <td>Id</td>
     <td>Name</td>
     <td>Password</td>
     <td>Email</td>
-    <td>phone</td>
+    <td>Type</td>
      <td>Action</td>  
     </tr>
  @foreach ($userlist as $user ) 
     
 
     <tr>
-        <td>{{$user[0]}}</td>
-        <td>{{$user[1]}}</td>
-        <td>{{$user[2]}}</td>
-        <td>{{$user[3]}}</td>
-        <td>{{$user[4]}}</td>
+        <td>{{$user['Id']}}</td>
+        <td>{{$user['Name']}}</td>
+        <td>{{$user['Password']}}</td>
+        <td>{{$user['Email']}}</td>
+        <td>{{$user['Type']}}</td>
         <td>
-           <a href='/Details'>Details</a>
-           <a href='/Edit'>Edit</a>
-           <a href='/Delete'>Delete</a>
+           <a href="/Details/{{$user['Id']}}">Details</a>
+           <a href="/Edit/{{$user['Id']}}">Edit</a>
+           <a href="/Delete/{{$user['Id']}}">Delete</a>
 
         </td>
        

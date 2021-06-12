@@ -37,5 +37,9 @@ Route::get('/List','createusercontroller@create');
 //Route::get('/List','createusercontroller@index');
 
 Route::get('/back','createusercontroller@back');
+//Route::get('/logout','createusercontroller@back');
  
+Route::get('/Details/{Id}','createusercontroller@details');
+Route::get('/delete/{Id}','createusercontroller@delete');
+Route::post('/delete/{Id}','createusercontroller@destroy');
  
